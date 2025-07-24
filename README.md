@@ -73,3 +73,29 @@ docker-compose up -d
 La documentation Swagger est disponible à l'adresse : `http://localhost:3001/api-docs`
 
 ## Structure du projet
+
+```
+src/
+├── config/          # Configuration des bases de données et services
+├── controllers/     # Contrôleurs de l'API
+├── middleware/      # Middleware personnalisés
+├── models/          # Modèles de données
+├── routes/          # Routes de l'API
+├── services/        # Services métier
+├── utils/           # Utilitaires
+├── app.js          # Configuration Express
+└── server.js       # Point d'entrée de l'application
+```
+
+## Contribution
+
+1. Créer une branche feature : `git checkout -b feature/nouvelle-fonctionnalite`
+2. Faire les modifications
+3. Tester : `npm test`
+4. Commit : `git commit -m "feat: description de la fonctionnalité"`
+5. Push : `git push origin feature/nouvelle-fonctionnalite`
+6. Créer une Pull Request vers la branche `dev`
+
+## Licence
+
+MIT
