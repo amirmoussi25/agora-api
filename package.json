@@ -1,18 +1,21 @@
 {
   "name": "agora-api",
   "version": "1.0.0",
-  "main": "index.js",
-  "directories": {
-    "doc": "docs",
-    "test": "tests"
-  },
+  "description": "API pour l'application Agora - Location de salles municipales",
+  "main": "src/server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "docker:build": "docker build -t agora-api .",
+    "docker:run": "docker run -p 3001:3001 agora-api",
+    "docker:compose": "docker-compose up -d"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
+  "keywords": ["api", "salles", "municipales", "location", "node.js"],
+  "author": "Amir Moussi",
+  "license": "MIT",
   "dependencies": {
     "bcryptjs": "^3.0.2",
     "cors": "^2.8.5",
